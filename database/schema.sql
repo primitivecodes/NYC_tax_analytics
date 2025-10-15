@@ -1,15 +1,25 @@
+-- =========================================
+-- NYC Taxi Analytics Database Schema
+-- Database: nyc_taxi_analytics
+-- =========================================
+
+
 -- Create database
 CREATE DATABASE IF NOT EXISTS nyc_taxi_analytics;
 USE nyc_taxi_analytics;
 
--- Table 1: Vendors
+-- =========================================
+-- Table: vendors (lookup table)
+-- =========================================
 CREATE TABLE IF NOT EXISTS vendors (
     vendor_id INT PRIMARY KEY,
     vendor_name VARCHAR(100) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Table 2: Trips (main table with all trip data)
+-- =========================================
+-- Table: trips (core dataset)
+-- =========================================
 CREATE TABLE IF NOT EXISTS trips (
     trip_id VARCHAR(50) PRIMARY KEY,
     vendor_id INT NOT NULL,
@@ -32,7 +42,9 @@ CREATE TABLE IF NOT EXISTS trips (
     INDEX index_duration (trip_duration_seconds)
 );
 
--- Table 3: Trip Statistics
+-- =========================================
+-- Table: trip_statistics (derived features)
+-- =========================================
 CREATE TABLE IF NOT EXISTS trip_statistics (
     statistic_id INT AUTO_INCREMENT PRIMARY KEY,
     trip_id VARCHAR(50) NOT NULL,
@@ -49,7 +61,11 @@ CREATE TABLE IF NOT EXISTS trip_statistics (
     INDEX index_rush_hour (is_rush_hour)
 );
 
--- Table 4: Data Quality Log
+-- =========================================
+-- Table: Data Quality Log
+-- =========================================
+
+
 CREATE TABLE IF NOT EXISTS data_quality_log (
     log_id INT AUTO_INCREMENT PRIMARY KEY,
     trip_id VARCHAR(50),
