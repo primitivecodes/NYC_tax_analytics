@@ -1,0 +1,22 @@
+{
+  "name": "nyc-taxi-backend",
+  "version": "1.0.0",
+  "description": "Backend API for NYC Taxi Trip Analytics",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.0",
+    "express": "^4.19.0",
+    "mysql2": "^3.6.0",
+    "sequelize": "^6.37.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

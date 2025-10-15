@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYC Taxi Trip Analytics Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">NYC <span>Taxi</span> Analytics</div>
+                <div class="last-updated">Last updated: <span id="lastUpdated">Loading...</span></div>
+            </div>
+        </div>
+    </header>
+    
+    <main class="dashboard">
+        <div class="container">
+            <h1 class="dashboard-title">Taxi Trip Data Analysis</h1>
+            
+            <div class="filters">
+                <div class="filter-row">
+                    <div class="filter-group">
+                        <label for="vendorFilter">Vendor</label>
+                        <select id="vendorFilter">
+                            <option value="all">All Vendors</option>
+                            <option value="1">Vendor 1</option>
+                            <option value="2">Vendor 2</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="passengerFilter">Passenger Count</label>
+                        <select id="passengerFilter">
+                            <option value="all">Any Number</option>
+                            <option value="1">1 Passenger</option>
+                            <option value="2">2 Passengers</option>
+                            <option value="3">3+ Passengers</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="durationFilter">Trip Duration</label>
+                        <select id="durationFilter">
+                            <option value="all">All Durations</option>
+                            <option value="short">Short (< 10 min)</option>
+                            <option value="medium">Medium (10-30 min)</option>
+                            <option value="long">Long (> 30 min)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filter-row">
+                    <div class="filter-group">
+                        <label for="startDate">Start Date</label>
+                        <input type="date" id="startDate">
+                    </div>
+                    <div class="filter-group">
+                        <label for="endDate">End Date</label>
+                        <input type="date" id="endDate">
+                    </div>
+                    <div class="filter-group">
+                        <label for="sortBy">Sort By</label>
+                        <select id="sortBy">
+                            <option value="pickup_datetime">Pickup Time</option>
+                            <option value="trip_duration">Duration</option>
+                            <option value="passenger_count">Passenger Count</option>
+                        </select>
+                    </div>
+                    <div class="filter-group" style="display: flex; align-items: flex-end;">
+                        <button id="applyFilters" class="btn">Apply Filters</button>
+                        <button id="resetFilters" class="btn btn-reset" style="margin-left: 10px;">Reset</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stats-cards">
+                <div class="stat-card card-primary">
+                    <div class="stat-label">Total Trips</div>
+                    <div class="stat-value" id="totalTrips">0</div>
+                </div>
+                <div class="stat-card card-success">
+                    <div class="stat-label">Avg. Passengers</div>
+                    <div class="stat-value" id="avgPassengers">0.0</div>
+                </div>
+                <div class="stat-card card-warning">
+                    <div class="stat-label">Avg. Duration</div>
+                    <div class="stat-value" id="avgDuration">0 min</div>
+                </div>
+                <div class="stat-card card-danger">
+                    <div class="stat-label">Longest Trip</div>
+                    <div class="stat-value" id="longestTrip">0 min</div>
+                </div>
+            </div>
+            
+            <div class="charts">
+                <div class="chart-container">
+                    <h3 class="chart-title">Trips by Vendor</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="vendorChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <h3 class="chart-title">Passenger Distribution</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="passengerChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <h3 class="chart-title">Trip Duration Distribution</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="durationChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <h3 class="chart-title">Trips by Hour of Day</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="hourlyChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="data-table">
+                <h3 class="chart-title">Trip Records</h3>
+                <div class="loading" id="tableLoading">
+                    <div class="spinner"></div> Loading trip data...
+                </div>
+                <table id="tripsTable" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Trip ID</th>
+                            <th>Vendor</th>
+                            <th>Pickup Time</th>
+                            <th>Duration (min)</th>
+                            <th>Passengers</th>
+                            <th>Pickup Location</th>
+                            <th>Dropoff Location</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tripsTableBody">
+                        <!-- Trip data will be populated here -->
+                    </tbody>
+                </table>
+                <div class="pagination" id="pagination">
+                    <!-- Pagination will be generated here -->
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>Team 20 &copy; 2025 | Data Source: NYC Taxi & Limousine Commission</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
