@@ -1,10 +1,10 @@
-// Returns the k largest elements (unsorted is fine)
+
 function quickselect(arr, k, compareFn) {
   function partition(left, right) {
     const pivot = arr[right];
     let i = left;
     for (let j = left; j < right; j++) {
-      if (compareFn(arr[j], pivot) > 0) { // keep elements greater than pivot
+      if (compareFn(arr[j], pivot) > 0) { 
         [arr[i], arr[j]] = [arr[j], arr[i]];
         i++;
       }
