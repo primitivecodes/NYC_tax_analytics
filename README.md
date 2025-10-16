@@ -5,7 +5,7 @@
 - Premier Ufitinema  
 - Colombe Nyituriki Igihozo  
 
----
+
 
 ## 🗽 Overview
 
@@ -14,34 +14,52 @@ The NYC Taxi Trip Dashboard is a fullstack web application designed to analyze a
 - **Backend:** Processes, validates, and stores trip data in a MySQL database, providing REST APIs for analytics.  
 - **Frontend:** Offers an interactive dashboard to explore urban mobility patterns and gain insights through filters, tables, and charts.
 
----
+
 
 ## 🧱 Project Structure
 
-nyc-taxi-dashboard/
 ├── backend/
-│ ├── src/
-│ │ ├── config/
-│ │ │ └── database.js
-│ │ ├── models/
-│ │ │ ├── index.js
-│ │ │ └── Trip.js
-│ │ ├── routes/
-│ │ │ ├── trips.js
-│ │ │ └── stats.js
-│ │ └── index.js
-│ ├── .env
-│ ├── .gitignore
-│ └── package.json
+
+│   ├── src/
+
+│   │   ├── config/
+
+│   │   │   └── database.js
+
+│   │   ├── models/
+
+│   │   │   ├── index.js
+
+│   │   │   └── Trip.js
+
+│   │   ├── routes/
+
+│   │   │   ├── trips.js
+
+│   │   │   └── stats.js
+
+│   │   └── index.js
+
+│   ├── .env
+
+│   ├── .gitignore
+
+│   └── package.json
+
 └── frontend/
-├── index.html
-├── style.css
-└── script.js
+
+    ├── index.html
+    
+    ├── style.css
+    
+    └── script.js
+    
+
 
 yaml
 Copy code
 
----
+
 
 ## ⚙️ Features
 
@@ -73,7 +91,7 @@ Copy code
 - Filter and sort data by vendor, time, distance, or day  
 - Visual charts and tables summarizing trip activity and distribution  
 
----
+
 
 ## 📊 Dashboard Example
 
@@ -81,7 +99,7 @@ Copy code
 
 🎥 Video Walkthrough: *Add your demo video link here.*
 
----
+
 
 ## 🔍 Key Findings
 
@@ -90,7 +108,7 @@ Copy code
 - **Trip Duration:** Most rides are short trips (< 30 minutes).  
 - **Passenger Count:** Majority of trips are single-passenger rides.  
 
----
+
 
 ## 🧠 Custom Algorithm
 
@@ -104,7 +122,7 @@ Copy code
 - Detects invalid data and edge cases  
 - Enables real-time trip duration distribution analysis  
 
----
+
 
 ## 💻 Tech Stack
 
@@ -115,7 +133,7 @@ Copy code
 | Frontend | HTML, CSS, JavaScript |
 | Data Processing | Node.js with csv-parser |
 
----
+
 
 ## 🚀 Installation Guide
 
@@ -195,3 +213,4 @@ Colombe Nyituriki Igihozo	Frontend Developer & UI Designer
 This project is developed for educational and research purposes only.
 
 © 2025 Team 20 — All rights reserved.
+
