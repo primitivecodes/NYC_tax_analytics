@@ -2,48 +2,23 @@
 **structure**
 nyc-taxi-dashboard/
 ├── backend/
-
 │   ├── src/
-
 │   │   ├── config/
-
 │   │   │   └── database.js
-
 │   │   ├── models/
-
 │   │   │   ├── index.js
-
 │   │   │   └── Trip.js
-
 │   │   ├── routes/
-
-│   │   │   ├── index.js
-
-
 │   │   │   ├── trips.js
-
-
 │   │   │   └── stats.js
-
-
 │   │   └── index.js
-
-
 │   ├── .env
-
-
 │   ├── .gitignore
-
 │   └── package.json
-
 └── frontend/
-
     ├── index.html
-    
     ├── style.css
-    
     └── script.js
-    
 
 ## Overview
 
