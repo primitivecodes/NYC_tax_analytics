@@ -1,4 +1,4 @@
-# 🚕 NYC Taxi Trip Dashboard
+#  NYC Taxi Trip Dashboard
 
 **Team 20**  
 - Elvis Shimwa  
@@ -7,7 +7,7 @@
 
 
 
-## 🗽 Overview
+## Overview
 
 The NYC Taxi Trip Dashboard is a fullstack web application designed to analyze and visualize New York City Taxi Trips using the raw dataset (`train.csv`).
 
@@ -16,7 +16,7 @@ The NYC Taxi Trip Dashboard is a fullstack web application designed to analyze a
 
 
 
-## 🧱 Project Structure
+## Project Structure
 
 ├── backend/
 
@@ -61,9 +61,9 @@ Copy code
 
 
 
-## ⚙️ Features
+## Features
 
-### 🧩 Backend
+### Backend
 
 **Data Cleaning & Validation:**  
 - Validates timestamps, coordinates, and trip durations.
@@ -85,7 +85,7 @@ Copy code
 | GET | /trips/top?metric=&k= | Get top-k trips by metric (average_speed, trip_distance) |
 | GET | /trips/anomalies | Fetch trips marked as anomalies (`is_suspect=1`) |
 
-### 💻 Frontend
+### Frontend
 
 - Clean, interactive dashboard built with HTML, CSS, and JavaScript  
 - Filter and sort data by vendor, time, distance, or day  
@@ -93,7 +93,7 @@ Copy code
 
 
 
-## 📊 Dashboard Example
+## 📊Dashboard Example
 
 **Example of the main dashboard interface.**  
 
@@ -101,7 +101,7 @@ Copy code
 
 
 
-## 🔍 Key Findings
+## Key Findings
 
 - **Peak Hours:** Taxi demand is highest during morning (7–9 AM) and evening (5–8 PM).  
 - **Vendor Distribution:** Vendors 1 and 2 show different performance trends.  
@@ -110,7 +110,7 @@ Copy code
 
 
 
-## 🧠 Custom Algorithm
+## Custom Algorithm
 
 **Trip Duration Categorization Algorithm:**  
 
@@ -124,7 +124,7 @@ Copy code
 
 
 
-## 💻 Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |-------|------------|
@@ -135,7 +135,7 @@ Copy code
 
 
 
-## 🚀 Installation Guide
+## Installation Guide
 
 Follow these steps to set up and run the project locally.
 
@@ -192,7 +192,7 @@ GET http://localhost:5000/trips/top?metric=trip_distance&k=5
 Get trip statistics:
 GET http://localhost:5000/trips/stats
 
-🔮 Future Improvements
+ Future Improvements
 Add authentication and user roles
 
 Integrate live trip streaming from NYC Open Data API
@@ -203,14 +203,15 @@ Enhance anomaly detection using machine learning
 
 Deploy fullstack app to AWS, Render, or Vercel
 
-👥 Contributors
+👥= Contributors
 Name	Role
 Elvis Shimwa	Backend Developer & Data Processing
 Premier Ufitinema	Fullstack Developer & Strategist
 Colombe Nyituriki Igihozo	Frontend Developer & UI Designer
 
-🪪 License
+ License
 This project is developed for educational and research purposes only.
 
 © 2025 Team 20 — All rights reserved.
+
 
