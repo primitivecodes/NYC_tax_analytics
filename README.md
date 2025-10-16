@@ -1,24 +1,49 @@
 # NYC Taxi Trip Dashboard
+
+**Team 20**
+1.Elvis Shimwa
+2.Premier Ufitinema
+3.Colombe Nyituriki Igihozo
 **structure**
+
 nyc-taxi-dashboard/
+
 ├── backend/
+
 │   ├── src/
+
 │   │   ├── config/
+
 │   │   │   └── database.js
+
 │   │   ├── models/
+
 │   │   │   ├── index.js
+
 │   │   │   └── Trip.js
+
 │   │   ├── routes/
+
 │   │   │   ├── trips.js
+
 │   │   │   └── stats.js
+
 │   │   └── index.js
+
 │   ├── .env
+
 │   ├── .gitignore
+
 │   └── package.json
+
 └── frontend/
+
     ├── index.html
+
     ├── style.css
+    
     └── script.js
+    
 
 ## Overview
 
@@ -49,10 +74,35 @@ The **frontend** provides a dashboard to explore urban mobility patterns and key
 * Filtering and sorting options for time, distance, and vendor  
 * Charts and tables summarizing trip patterns  
 
-![Dashboard Example](./screenshots/dashboard.png)  
+![Dashboard Example]([./screenshots/dashboard.png](https://drive.google.com/file/d/1TNEw3uOepleaD1y7y6piaZNORBZ1cPEL/view?usp=sharing))  
 *Example of the main dashboard view.*
 
+**Video Walkthrough**
+video link
+
 ---
+
+**Key Findings**
+**Peak Hours:** Taxi demand peaks during morning and evening rush hours
+
+**Vendor Distribution: **Vendor 1 and 2 show different operational patterns
+
+**Trip Duration:** Majority of trips are short-distance (under 30 minutes)
+
+**Passenger Patterns:** Single passengers constitute the majority of trips
+
+**Custom Algorithm Implementation**
+
+**We implemented a custom duration categorization algorithm that:**
+
+Processes raw trip duration in seconds
+
+Categorizes into Short (<10min), Medium (10-30min), Long (>30min)
+
+Handles edge cases and invalid data
+
+Provides real-time distribution analysis
+
 
 ## Tech Stack
 
@@ -62,11 +112,4 @@ The **frontend** provides a dashboard to explore urban mobility patterns and key
 * **Data Processing:** Node.js with `csv-parser`  
 
 ---
-
-## Installation & Setup
-
-### 1. Clone repository
-
-```bash
-git clone <your-repo-url>
-cd Train:Trips
+ Complete Installation Guide
