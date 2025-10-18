@@ -91,7 +91,8 @@ Copy code
 - Filter and sort data by vendor, time, distance, or day  
 - Visual charts and tables summarizing trip activity and distribution  
 
-
+**UI/UX link**
+https://www.figma.com/design/MNxvkzMAcIXcw16dpiB1mU/Untitled?node-id=0-1&m=dev&t=z303uzQrXc0rlYQV-1
 
 ## 📊Dashboard Example
 
@@ -213,5 +214,6 @@ Colombe Nyituriki Igihozo	Frontend Developer & UI Designer
 This project is developed for educational and research purposes only.
 
 © 2025 Team 20 — All rights reserved.
+
 
 
