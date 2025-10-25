@@ -98,7 +98,7 @@ https://www.figma.com/design/MNxvkzMAcIXcw16dpiB1mU/Untitled?node-id=0-1&m=dev&t
 
 **Example of the main dashboard interface.**  
 
-🎥 Video Walkthrough: *(https://www.loom.com/share/14752e04a4c44373b11c9bcd0658527e)*
+🎥 Video Walkthrough: [(https://www.loom.com/share/14752e04a4c44373b11c9bcd0658527e)*](https://youtu.be/vAHdpbAD35o)](https://youtu.be/vAHdpbAD35o)
 
 
 
@@ -214,6 +214,7 @@ Colombe Nyituriki Igihozo	Frontend Developer & UI Designer
 This project is developed for educational and research purposes only.
 
 © 2025 Team 20 — All rights reserved.
+
 
 
 
